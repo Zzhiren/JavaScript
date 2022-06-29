@@ -180,7 +180,7 @@
       }
 
       throttled.cancel = function() {
-            clearTimeout(timeout);
+            clearTimeout(timer);
             previous = 0;
             timer = null;
       }

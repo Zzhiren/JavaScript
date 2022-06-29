@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin负值问题</title>
+	<style>
+		.container {
+				height: 200px;
+				width: 400px;
+				border: 1px solid red;
+				padding: 20px;
+				margin-top: 20px;
+		}
+
+		.div1 {
+				width: 100px;
+				height: 100px;
+				border: 1px solid blue;
+		}
+
+		.div2 {
+				width: 100px;
+				height: 100px;
+				border: 1px solid green;
+        margin-top: -10px;
+    }
+
+    .div3 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+    }
+
+    .div4 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid green;
+        margin-left: -10px;
+    }
+
+    .div5 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        margin-right: -10px;
+    }
+
+    .div6 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid green;
+    }
+
+    .div7 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        margin-bottom: -10px;
+    }
+
+    .div8 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid green;
+    }
+
+    .flex {
+		    display: flex;
+    }
+
+	</style>
+</head>
+<body>
+	<!--margin-top负值，元素向上、向左移动-->
+	<div class="container">
+		<div class="div1"></div>
+		<div class="div2"></div>
+	</div>
+
+	<!--margin-left负值，元素向上、向左移动-->
+	<div class="container">
+		<div class="div3"></div>
+		<div class="div4"></div>
+	</div>
+
+	<!--margin-right负值，自身不动，右侧元素左移-->
+	<div class="container flex">
+		<div class="div5"></div>
+		<div class="div6"></div>
+	</div>
+
+	<!--margin-bottom负值，自身不懂，下方元素上移-->
+	<div class="container">
+		<div class="div7"></div>
+		<div class="div8"></div>
+	</div>
+</body>
+</html>

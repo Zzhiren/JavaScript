@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BFC</title>
+	<style>
+		.container {
+				background: #999999;
+		}
+		.left {
+				float: left;
+		}
+		p {
+        background: #669900;
+		}
+		.bfc {
+				overflow: hidden; /* 触发BFC条件 */
+		}
+	</style>
+</head>
+<body>
+	<div class="container bfc">
+		<img class="left" src="//www.baidu.com/img/flexible/logo/pc/result@2.png" alt="">
+		<p class="bfc">这是一段文字</p>
+	</div>
+</body>
+</html>

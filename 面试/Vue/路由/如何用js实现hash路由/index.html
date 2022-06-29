@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用js实现hash路由</title>
+</head>
+<body>
+<div>
+	<button id="btn">修改hash</button>
+</div>
+<script>
+	window.onhashchange = (event) => {
+    console.log('old url: ', event.oldURL)
+    console.log('new url: ', event.newURL)
+	}
+
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('hash: ', location.hash)
+  })
+
+	document.getElementById('btn').addEventListener('click', () => {
+    location.href = '#/user'
+	})
+
+</script>
+</body>
+</html>
